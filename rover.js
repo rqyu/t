@@ -366,7 +366,7 @@ gameArea.canvas.addEventListener('click', (e) => {
 		}
 	}
 
-	addRover(px, py, 'N');
+	if (px >= 0 && py >= 0) addRover(px, py, 'N');
 
 	//console.log(px + ', ' + py);
 }, false);
