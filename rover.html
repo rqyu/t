@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mars Rover</title>
+	<link rel=stylesheet type="text/css" href="rover.css">
+</head>
+<body>
+	<header>Mars rover nav control</header>
+	<main>
+		<nav>
+			<h4>Map Setting</h4>
+			<label>Width(x):</label>
+			<input type="text" placeholder="e.g. 3, 21" id="mapwidth"> <br>
+			<label>Length(y):</label>
+			<input type="text" placeholder="e.g. 3, 21" id="maplength"> <br>
+			<button type="button" onclick="updateGrid();">Resize Map</button> <br>
+
+			<h4>Add Rover</h4>
+			<label>Rover x:</label>
+			<input type="text" placeholder="e.g. 3, 21" id="rvx"> <br>
+			<label>Rover y:</label>
+			<input type="text" placeholder="e.g. 3, 21" id="rvy"> <br>
+			<label>Rover facing:</label>
+			<input type="text" placeholder="N W S E only" id="rvo"> <br>
+			<button type="button" onclick="addRover();">Add Rover</button>
+
+			<h4>Movements</h4>
+			<label>Rover id:</label>
+			<input type="text" id="rvid"> <br>
+			<label>Moves: </label>
+			<input type="text" placeholder="L R M only" id="rvmoves"> <br>
+			<label>Move delay:</label>
+			<input type="range" id="delay" min="10" max="1000" value="150"> <br>
+			<button type="button" onclick="moveRover();">Move</button>
+
+			<h4>Recall Rover</h4>
+			<label>Recall id:</label>
+			<input type="text" id="recallid"> <br>
+			<button type="button" onclick="recallRover();">Recall</button>
+		</nav>
+
+		<section id="game">
+		</section>
+		
+		<aside id="notice">
+			<section>
+				<h3>Instruction:</h3>
+				<p>Click empty block to add a Rover</p>
+				<p>"Rover facing" is default to N</p>
+				<p>Click the rover in map to highlight, or put rover id in "Rover id", then put LMR combination in "Moves" to move rover with delay</p>
+				<p>Use Arrow Keys to control highlighted rover</p>
+			</section>
+			<section>
+				<h3>Notice:</h3>
+				<p>Map of size (x, y) will have grid of size (x + 1, y + 1). This is because based on the given input tests, rovers need to either trespass land blocks (0, y) and (5, y) for a map size of 5 x 5.</p>
+				<p>Therefore, for this case, a map with size 5 x 5 will have bottom left (0, 0) and top right (5, 5)</p>
+			</section>
+		</aside>
+	</main>
+	<script type="text/javascript" src="rover.js"></script>
+</body>
+</html>

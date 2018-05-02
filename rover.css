@@ -1,0 +1,87 @@
+* {
+	color: #696969;
+}
+
+header {
+	font-size: 36pt;
+	font-weight: bold;
+	padding: 20px;
+	margin-bottom: 10px;
+	text-shadow: 5px 5px 5px #999;
+	text-align: center;
+}
+
+nav, aside {
+	background: linear-gradient(#EFEFEF, #FFFFFF);
+}
+
+nav, aside, section {
+	border: 1px dotted #888;
+}
+
+nav {
+	padding: 5px;
+	float: left;
+	min-width: 200px;
+}
+
+nav h4 {
+	color: black;
+}
+
+nav label {
+	width: 6em;
+	float: left;
+}
+
+nav button {
+	margin-top: 5px;
+	font-size: 12pt;
+	background-color: #E7FFAA;
+	border: 1px solid #777;
+	border-radius: 3px;
+	color: black;
+}
+
+input {
+	width: 7em;
+}
+
+section {
+	position: relative;
+	width: 50%;
+	float: left;
+	overflow: scroll;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	max-height: 600px;
+	padding: 3px;
+	text-align: center;
+	margin: 0px 3px;
+}
+
+section::-webkit-scrollbar { display: none; }
+
+section canvas {
+	display: inline;
+}
+
+aside {
+	position: relative;
+	width: calc(45% - 200px);
+	float: left;
+	padding: 3px;
+}
+
+aside section {
+	width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+	aside {
+		display: none;
+	}
+	section {
+		width: calc(92% - 200px);
+	}
+}
